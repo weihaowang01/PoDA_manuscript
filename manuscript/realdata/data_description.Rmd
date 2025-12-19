@@ -1,0 +1,69 @@
+---
+title: "Description of datasets used for real data applications"
+output: html_document
+---
+  
+## PD datasets
+Four PD datasets—Wallen1 (Hill-Brurns et al., 2017), Wallen2 (Wallen et al., 2020), Lub6, and Lub12 (Lubomski et al., 2022)—contain gut microbiome counts from both PD patients and healthy controls, along with sample metadata.
+
+Wallen1 is stored in ~/manuscript/realdata/PD/Wallen1.rds, which includes count data of 556 genera across 507 samples, along with the metadata of these 507 samples. Wallen2 is stored in ~/manuscript/realdata/PD/Wallen2.rds, which includes count data of 411 genera across 333 samples, along with the metadata of these 333 samples. Lub6 is stored in ~/manuscript/realdata/PD/Lub6.rds, which includes count data of 426 genera across 168 samples, along with the metadata of these 166 samples. Lub12 is stored in ~/manuscript/realdata/PD/Lub12.rds, which includes count data of 426 genera across 168 samples, along with the metadata of these 166 samples. You can access the data and view 
+their information using the following code.
+
+```{r, echo=TRUE}
+Wallen1 <- readRDS("~/manuscript/realdata/PD/Wallen1.rds")
+summary(Wallen1)
+
+dim(Wallen1$otu) 
+Wallen1$otu[1:3,1:3] #the count data of 556 genera across 507 samples (row: sample; column: genus).
+
+dim(Wallen1$meta)
+head(Wallen1$meta) # the metadata table of the 507 samples (row: sample; column: metadata).
+
+Wallen2 <- readRDS("~/manuscript/realdata/PD/Wallen2.rds")
+summary(Wallen2)
+
+dim(Wallen2$otu) 
+Wallen2$otu[1:3,1:3] #the count data of 411 genera across 333 samples (row: sample; column: genus).
+
+dim(Wallen2$meta)
+head(Wallen2$meta) # the metadata table of the 333 samples (row: sample; column: metadata)
+
+Lub6 <- readRDS("~/manuscript/realdata/PD/Lub6.rds")
+summary(Lub6)
+
+dim(Lub6$otu) 
+Lub6$otu[1:3,1:3] #the count data of 426 genera across 168 samples (row: sample; column: genus).
+
+dim(Lub6$meta)
+head(Lub6$meta) # the metadata of the 168 samples (row: sample; column: metadata).
+
+Lub12 <- readRDS("~/manuscript/realdata/PD/Lub12.rds")
+summary(Lub12)
+
+dim(Lub12$otu) 
+Lub12$otu[1:3,1:3] #the count data of 426 genera across 166 samples (row: sample; column: genus).
+
+dim(Lub12$meta)
+head(Lub12$meta) # the metadata table of the 166 samples (row: sample; column: metadata)
+```
+
+
+## CDI dataset
+  
+The CDI dataset from Schubert et al. (2014) includes gut microbiome counts from infected and healthy individuals.
+
+The data is stored in ~/manuscript/realdata/CDI/CDI.RData, which includes count data of 1822 taxa across 338 samples, along with the metadata of these 338 samples and the taxonomy table of these 1822 taxa. You can access the data and view its information using the following code.
+
+```{r, echo=TRUE}
+load("~/manuscript/realdata/CDI/CDI.RData")
+dim(data.obj$otu.tab)
+
+dim(data.obj$otu.tab)
+data.obj$otu.tab[1:3,1:3] # the count data of 1822 taxa across 338 samples (row: taxon; column: sample).
+
+dim(data.obj$meta.dat)
+head(data.obj$meta.dat[,1:3]) # the metadata table of the 338 sample (row: sample; column: metadata).
+
+dim(data.obj$otu.name)
+head(data.obj$otu.name) # the taxonomy table of the 1822 taxa (row: taxon; column: taxonomy).
+```
