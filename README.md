@@ -1,2 +1,3 @@
 # PoDA
-Script for PoDA manuscript
+Scripts for PoDA manuscript.
+Please refer to ~/manuscript/readme.pdf for detailed instructions.
