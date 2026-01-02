@@ -16,7 +16,7 @@ library(S4Vectors)
 library(TreeSummarizedExperiment)
 library(tidytree)
 
-source("~/manuscript/helpler_function.R")
+source("~/manuscript/helper_function.R")
 source("~/manuscript/PODA.R")
 load("~/manuscript/realdata/CDI/CDI.RData")
 
