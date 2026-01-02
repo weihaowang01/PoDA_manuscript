@@ -10,7 +10,7 @@
   library(dplyr)
   library(tidytree)
   result_all=NULL
-  source("~/manuscript/helpler_function.R")
+  source("~/manuscript/helper_function.R")
   source("~/manuscript/PODA.R")
   source("~/manuscript/imputation.R")
   for(mumu in c(2)){ # effect size
