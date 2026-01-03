@@ -13,9 +13,9 @@ oo = match( colnames(otu),rownames(taxon_name ))
 colnames(otu)=taxon_name[oo]
 otu=otu[,which(!is.na(colnames(otu)))]
 
-rdind=which(meta$t==12)
-otu=otu[rdind,]
-meta=meta[rdind,]
+# rdind=which(meta$t==12)
+# otu=otu[rdind,]
+# meta=meta[rdind,]
 otu1=as.data.frame(otu)
 
 # Ensure that the column names are unique.
